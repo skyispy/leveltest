@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #wrap {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        #wrap > h1 {
+            margin-top: 100px;
+        }
+        #wrap > .img-box {
+            width: 80%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .img-box > img {
+            width: 200px;
+            height: 300px;
+            border: 1px solid #444;
+        }
+        #wrap > .img1{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 10%;
+            display: none;
+        }
+        .img1 > img {
+            width: 100%;
+            height: 100%;
+        }
+        #wrap > .img2{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 10%;
+            display: none;
+        }
+        .img2 > img {
+            width: 100%;
+            height: 100%;
+        }
+        #wrap > .img3{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 10%;
+            display: none;
+        }
+        .img3 > img {
+            width: 100%;
+            height: 100%;
+        }
+        #wrap > .img4{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 10%;
+            display: none;
+        }
+        .img4 > img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>이미지 갤러리</h1>
+        <div class="img-box">
+            <img id="img1" src="https://www.next-t.co.kr/public/uploads/7b7f7e2138e29e598cd0cdf2c85ea08d.jpg" alt="">
+            <img id="img2" src="https://cdn2.iconfinder.com/data/icons/web-interface-icons/66/Img-512.png" alt="">
+            <img id="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNPhCLs1ytsEMX1zgF2n4A7QK-nc3tHAuiK-z_qaMTiPtX1qsAcyiiVINQvylRNUMQ_P8&usqp=CAU" alt="">
+            <img id="img4" src="https://png.pngtree.com/png-vector/20190514/ourmid/pngtree-img-file-format-icon-design-png-image_1041703.jpg" alt="">
+        </div>
+        <div class="img1"><img src="https://www.next-t.co.kr/public/uploads/7b7f7e2138e29e598cd0cdf2c85ea08d.jpg" alt=""><button id="close1">닫기</button></div>
+        <div class="img2"><img src="https://cdn2.iconfinder.com/data/icons/web-interface-icons/66/Img-512.png" alt=""><button id="close2">닫기</button></div>
+        <div class="img3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNPhCLs1ytsEMX1zgF2n4A7QK-nc3tHAuiK-z_qaMTiPtX1qsAcyiiVINQvylRNUMQ_P8&usqp=CAU" alt=""><button id="close3">닫기</button></div>
+        <div class="img4"><img src="https://png.pngtree.com/png-vector/20190514/ourmid/pngtree-img-file-format-icon-design-png-image_1041703.jpg" alt=""><button id="close4">닫기</button></div>
+    </div>
+</body>
+<script>
+    const idImg1 = document.getElementById("img1");
+    const idImg2 = document.getElementById("img2");
+    const idImg3 = document.getElementById("img3");
+    const idImg4 = document.getElementById("img4");
+    const button1 = document.getElementById("close1");
+    const button2 = document.getElementById("close2");
+    const button3 = document.getElementById("close3");
+    const button4 = document.getElementById("close4");
+    idImg1.onclick = () => {
+        const classImg1 = document.querySelector(".img1");
+        classImg1.style.display = "block";
+        classImg1.style.boxShadow = "0px 0px 1000px 1000px #888";
+    }
+    button1.onclick = () => {
+        const classImg1 = document.querySelector(".img1");
+        classImg1.style.display = "none";
+    }
+    idImg2.onclick = () => {
+        const classImg2 = document.querySelector(".img2");
+        classImg2.style.display = "block";
+        classImg2.style.boxShadow = "0px 0px 1000px 1000px #888";
+    }
+    button2.onclick = () => {
+        const classImg2 = document.querySelector(".img2");
+        classImg2.style.display = "none";
+    }
+    idImg3.onclick = () => {
+        const wrap = document.getElementById("wrap");
+        const classImg3 = document.querySelector(".img3");
+        classImg3.style.display = "block";
+        classImg3.style.boxShadow = "0px 0px 1000px 1000px #888";
+    }
+    button3.onclick = () => {
+        const classImg3 = document.querySelector(".img3");
+        classImg3.style.display = "none";
+    }
+    idImg4.onclick = () => {
+        const wrap = document.getElementById("wrap");
+        const classImg4 = document.querySelector(".img4");
+        classImg4.style.display = "block";
+        classImg4.style.boxShadow = "0px 0px 1000px 1000px #888";
+    }
+    button4.onclick = () => {
+        const classImg4 = document.querySelector(".img4");
+        classImg4.style.display = "none";
+    }
+</script>
+</html>

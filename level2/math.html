@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap {
+            width: 300px;
+            height: 300px;
+        }
+        #wrap > .tab2 > span:nth-child(4) {
+            width: 30%;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #wrap > .tab3 > span:nth-child(4) {
+            width: 30%;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #wrap > .tab4 > span:nth-child(4) {
+            width: 30%;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #wrap > .tab5 > span:nth-child(4) {
+            width: 30%;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #wrap > .tab1 {
+            width: 100%;
+            height: 16%;
+            background-color: #444;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        #wrap > .tab2 {
+            width: 100%;
+            height: 16%;
+            background-color: #555;
+            display: flex;
+        }
+        .tab2 > span:nth-child(1) {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tab2 > span:nth-child(2) {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellow;
+        }
+        #wrap > .tab3 {
+            width: 100%;
+            height: 16%;
+            background-color: #666;
+            display: flex;
+        }
+        .tab3 > span:nth-child(1) {
+            width: 23.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tab3 > span:nth-child(2) {
+            width: 23.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tab3 > span:nth-child(3) {
+            width: 23.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #wrap > .tab4 {
+            width: 100%;
+            height: 16%;
+            background-color: #666;
+            display: flex;
+        }
+        .tab4 > span:nth-child(1) {
+            width: 23.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tab4 > span:nth-child(2) {
+            width: 23.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tab4 > span:nth-child(3) {
+            width: 23.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #wrap > .tab5 {
+            width: 100%;
+            height: 16%;
+            background-color: #666;
+            display: flex;
+        }
+        .tab5 > span:nth-child(1) {
+            width: 23.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tab5 > span:nth-child(2) {
+            width: 23.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tab5 > span:nth-child(3) {
+            width: 23.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #wrap > .tab6 {
+            width: 100%;
+            height: 16%;
+            background-color: #666;
+            display: flex;
+        }
+        .tab6 > span:nth-child(1) {
+            width: 46.6%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tab6 > span:nth-child(2) {
+            width: 23.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tab6 > span:nth-child(3) {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="tab1"></div>
+        <div class="tab2">
+            <span>AC</span>
+            <span>÷</span>
+        </div>
+        <div class="tab3">
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>×</span>
+        </div>
+        <div class="tab4">
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>-</span>
+        </div>
+        <div class="tab5">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>+</span>
+        </div>
+        <div class="tab6">
+            <span>0</span>
+            <span>.</span>
+            <span>=</span>
+        </div>
+    </div>
+</body>
+<script>
+    const push = () => {
+        const div = document.querySelector(".tab1");
+        const p0 = document.querySelector(".tab6 > span:nth-child(1)");
+        const p1 = document.querySelector(".tab5 > span:nth-child(1)");
+        const p2 = document.querySelector(".tab5 > span:nth-child(2)");
+        const p3 = document.querySelector(".tab5 > span:nth-child(3)");
+        const p4 = document.querySelector(".tab4 > span:nth-child(1)");
+        const p5 = document.querySelector(".tab4 > span:nth-child(2)");
+        const p6 = document.querySelector(".tab4 > span:nth-child(3)");
+        const p7 = document.querySelector(".tab3 > span:nth-child(1)");
+        const p8 = document.querySelector(".tab3 > span:nth-child(2)");
+        const p9 = document.querySelector(".tab3 > span:nth-child(3)");
+        p0.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = "0";
+            div.append(span);
+        }
+        p1.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = "1";
+            div.append(span);
+        }
+        p2.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = "2";
+            div.append(span);
+        }
+        p3.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = "3";
+            div.append(span);
+        }
+        p4.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = "4";
+            div.append(span);
+        }
+        p5.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = "5";
+            div.append(span);
+        }
+        p6.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = "6";
+            div.append(span);
+        }
+        p7.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = "7";
+            div.append(span);
+        }
+        p8.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = "8";
+            div.append(span);
+        }
+        p9.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = "9";
+            div.append(span);
+        }
+        const divide = document.querySelector(".tab2 > span:nth-child(2)");
+        const multipy = document.querySelector(".tab3 > span:nth-child(4)");
+        const minus = document.querySelector(".tab4 > span:nth-child(4)");
+        const plus = document.querySelector(".tab5 > span:nth-child(4)");
+        const end = document.querySelector(".tab6 > span:nth-child(3)");
+        divide.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = " ÷ ";
+            div.append(span);
+        }
+        multipy.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = " × ";
+            div.append(span);
+        }
+        minus.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = " - ";
+            div.append(span);
+        }
+        plus.onclick = () => {
+            const span = document.createElement("span");
+            span.innerHTML = " + ";
+            div.append(span);
+        }
+        end.onclick = () => {
+            const spans = document.querySelectorAll(".tab1 > span");
+            const arr = [];
+            for(let i = 0; i < spans.length; i++){
+                const split = spans[i].innerHTML.split("<span>");
+                arr.push(split);
+            }
+            console.log(arr);
+            let text = "";
+            for(let i = 0; i < arr.length; i++){
+                text += arr[i][0];
+                console.log(arr[i][0])
+            }
+            text = text.split(" ");
+            let result = "error";
+            if(text.includes("+")){
+                result = JSON.parse(text[0]) + JSON.parse(text[2]);
+                div.innerHTML = "";
+                const span = document.createElement("span");
+                span.innerHTML = `${result}`;
+                div.append(span);
+            }else if(text.includes("-")){
+                result = JSON.parse(text[0]) - JSON.parse(text[2]);
+                div.innerHTML = "";
+                const span = document.createElement("span");
+                span.innerHTML = `${result}`;
+                div.append(span);
+            }else if(text.includes("×")){
+                result = JSON.parse(text[0]) * JSON.parse(text[2]);
+                div.innerHTML = "";
+                const span = document.createElement("span");
+                span.innerHTML = `${result}`;
+                div.append(span);
+            }else if(text.includes("÷")){
+                result = JSON.parse(text[0]) / JSON.parse(text[2]);
+                div.innerHTML = "";
+                const span = document.createElement("span");
+                span.innerHTML = `${result}`;
+                div.append(span);
+            }
+        }
+    }
+    push();
+</script>
+</html>

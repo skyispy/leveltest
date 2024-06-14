@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <input id="text" type="text">
+        <button id="btn">작성</button>
+        <div id="content">
+
+        </div>
+    </div>
+</body>
+<script>
+    const create = () => {
+        let arr = [];
+        const input = document.getElementById("text");
+        const btn = document.getElementById('btn');
+        btn.onclick = () => {
+            if(localStorage.getItem("Todo") === null){
+                localStorage.setItem("Todo", JSON.stringify(arr));
+            } else{
+                arr = JSON.parse(localStorage.getItem("Todo"));
+            }
+            const content = document.getElementById("content");
+            const div = document.createElement("div");
+            const title = document.createElement("span");
+            const date = document.createElement("span");
+            const clear = document.createElement("span");
+            const clear_btn = document.createElement("button");
+            const delete_btn = document.createElement("button");
+            clear_btn.innerText = "완료";
+            delete_btn.innerText = "삭제";
+            const _date = new Date();
+            title.innerHTML = `${input.value}`;
+            date.innerHTML = `${_date.getFullYear()}-${_date.getMonth() + 1}-${_date.getDate()}`;
+            clear.append(clear_btn, delete_btn);
+            div.append(title, date, clear);
+            content.append(div);
+            const todoList = {
+                title: input.value,
+                date: `${_date.getFullYear()}-${_date.getMonth() + 1}-${_date.getDate()}`
+            }
+            arr.push(todoList);
+            localStorage.setItem("Todo", JSON.stringify(arr));
+            clear_btn.onclick = () => {
+                div.style.textDecoration = "line-through";
+            }
+            delete_btn.onclick = () => {
+                div.remove();
+            }
+        }
+
+    }
+    create();
+</script>
+</html>
