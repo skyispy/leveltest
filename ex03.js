@@ -21,7 +21,12 @@ function primeFactor(n) {
     for(let i = 0; i < arr.length; i++){
         if(isprime(arr[i])) _arr.push(arr[i]);
     }
-    return _arr;
+    let text = "";
+    for(let i = 0; i < _arr.length; i++){
+        text += _arr[i];
+        text += ", "
+    }
+    return text;
 }
 
 console.log(primeFactor(55));
