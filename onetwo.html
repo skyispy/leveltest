@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one">One</div>
+    <div id="two">Two</div>
+</body>
+<script>
+    const one = document.getElementById("one");
+    const two = document.getElementById("two");
+
+    one.addEventListener("click", function(){
+        console.log(two); // two가 삭제되기 전에 실행되게 한다.
+        two.remove();
+        // console.log(two); // 삭제된 two를 참조하지 않게 코드를 지운다.
+    })
+</script>
+</html>
